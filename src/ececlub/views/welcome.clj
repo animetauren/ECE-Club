@@ -7,14 +7,36 @@
 (defpage "/" []
          (common/layout
           (html
-               [:h1
-                [:center "Welcome to ECE Club"]]
-                [:h2 (link-to "/about" "link")]
-                 )))
+            [:head (include-css "/css/reset.css")]
+              [:body 
+              [:div#id "container_part_1"
+              [:class "spacer_15"
+               [:class "container_16"
+                [:class "grid_4"
+                 [:image "/img/logo.png"]]
+                  [:class "grid_10"
+                   [:ul#id "nav"
+                    [:li [link-to "/about"]
+                     ]
+                     :li [link-to "/contact"]
+                       ]
+                        ]
+                         ]
+                          ]
+                           ]
+                            ]
+          )))
 (defpage "/about" []
          (html5
           (include-css "/css/reset.css")
           [:body
 	   			[:h1
+           [:center "About the ECE Club!!"]]
+           ]))
+(defpage "/contact" []
+         (html5
+          (include-css "/css/reset.css")
+          [:body
+          [:h1
            [:center "About the ECE Club!!"]]
            ]))
